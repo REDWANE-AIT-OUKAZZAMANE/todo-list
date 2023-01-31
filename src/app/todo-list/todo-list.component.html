@@ -1,0 +1,23 @@
+<div>
+    <h2>My Todo List</h2>
+    <form (ngSubmit)="addTask(taskInput.value, prioritySelect.value, dueDateInput.value); taskInput.value=''; dueDateInput.value=''">
+      <input type="text" #taskInput placeholder="Task description">
+      <input type="date" #dueDateInput>
+      <select #prioritySelect >
+        <option value="Priority">Priority...</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+    <li *ngFor="let task of tasks">
+        {{ task.todo }} | 
+        <span [ngClass]="{'low': task.priority === 'Low', 'medium': task.priority === 'Medium', 'high': task.priority === 'High'}">
+          {{ task.priority }}
+        </span> | 
+        {{ task.dueDate | date }}
+        <button (click)="removeTask(task.todo)">Delete</button>
+      </li>
+  </div>
+  
