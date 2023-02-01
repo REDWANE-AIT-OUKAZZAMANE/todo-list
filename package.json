@@ -2,7 +2,7 @@
   "name": "todo-list",
   "version": "0.0.0",
   "scripts": {
-    "buildProd": "ng build --base-href=/Todo-List-github-io/",
+    "buildProd": "ng build --base-href=redwane-ait-oukazzamane.github.io/todo-list/",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
