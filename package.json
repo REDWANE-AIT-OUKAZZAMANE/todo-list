@@ -2,6 +2,7 @@
   "name": "todo-list",
   "version": "0.0.0",
   "scripts": {
+    "buildProd": "ng build --base-href=/Todo-List/",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
